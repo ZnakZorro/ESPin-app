@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>KODis 1.1.0</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {margin:0; padding:0; background:#000;}
+iframe {width:100%;height: 60em;}
+</style>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+
+<script>
+
+var wybranyKomputer = 0;
+var wybraneRadio=0;
+var pierwszy = true;
+
+
+
+	// DOM READY
+	function onDeviceReady() {
+		//if (localStorage.getItem("___espin___app")) wybraneRadio = localStorage.getItem("___espin___app");
+	}
+	
+
+   function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+
+		try {if (device.uuid) {console.log(device.uuid);}	}
+		catch(err) {onDeviceReady();}
+		
+	}
+
+
+</script>
+</head>
+
+<body onload="onLoad();" >
+<iframe src="http://82.145.72.178"></iframe>
+</body>
+</html>
